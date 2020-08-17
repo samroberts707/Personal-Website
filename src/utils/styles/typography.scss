@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    strong {
+        font-weight: 700;
+    }
+}
+p, li, a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    strong {
+        font-weight: 600;
+    }
+}
+
+h1 {
+    font-size: 3vw;
+}
+h2 {
+    font-size: 2.3vw
+}
+h4 {
+    font-size: 1.8vw;
+}
+p, a, li {
+    font-size: 1.5vw;
+    line-height: 1.2;
+}
+h1, h2, h3, h4, h5, p, li {
+    color: var(--text-primary);
+}
+a {
+    position: relative;
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        content: "";
+        opacity: 0;
+        transition: opacity .3s, width .3s;
+    }
+    &:hover::after {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 7vw;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    h4 {
+        font-size: 4.5vw;
+    }
+    p, a, li {
+        font-size: 4vw;
+    }
+
+}

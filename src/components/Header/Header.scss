@@ -1,0 +1,20 @@
+div.header {
+    display: grid;
+    position: relative;
+    padding: 0 10%;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    div.content {
+        h1 {
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
