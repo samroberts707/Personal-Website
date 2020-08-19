@@ -10,6 +10,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>
     <Header />
+    <Navigation />
   </React.StrictMode>,
   document.getElementById('root')
 );
