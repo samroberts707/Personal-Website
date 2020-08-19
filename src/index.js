@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './utils/styles/reset.scss';
 import './utils/styles/colors.scss';
 import './utils/styles/typography.scss';
+import Navigation from './components/Navigation/Navigation.js';
 import Header from './components/Header/Header.js';
 import * as serviceWorker from './serviceWorker';
 

@@ -1,4 +1,9 @@
-:root {
-    --primary-color: #F75D5D;
+div#root {
     --text-primary: #333333;
+}
+div#root[color-theme='red'] {
+    --primary-color: #F75D5D;
+}
+div#root[color-theme='blue'] {
+    --primary-color: #17BEBB;
 }
