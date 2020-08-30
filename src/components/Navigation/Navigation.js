@@ -6,15 +6,15 @@ class Navigation extends Component {
         return (
             <nav>
                 <div className="logo-wrapper">
-                    
+                    <h1 className="logo">&#60;<span>SR</span>/&#62;</h1>
                 </div>
                 <div className="nav-items">
-                    <div className="theme-picker">
+                    {/* <div className="theme-picker">
                         <div className="current-theme">
                             <div className="theme-color"></div>
                             <div className="dropdown-link"></div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="nav-links">
                         <a href="#about-me">About me</a>
                         <a href="#timeline">Timeline</a>

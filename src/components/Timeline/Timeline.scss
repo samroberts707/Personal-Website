@@ -1,0 +1,25 @@
+div.timeline {
+    display: block;
+    position: relative;
+    background-color: #F7F7F7;
+    padding: 10%;
+    h1 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    div.wrapper {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        div.item {
+            grid-row: auto / span 1;
+            padding: 30px;
+            &:nth-child(odd) {
+                grid-column: 1;
+            }
+            &:nth-child(even) {
+                grid-column: 2;
+            }
+        }
+    }
+}

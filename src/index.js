@@ -5,12 +5,14 @@ import './utils/styles/colors.scss';
 import './utils/styles/typography.scss';
 import Navigation from './components/Navigation/Navigation.js';
 import Header from './components/Header/Header.js';
+import Timeline from './components/Timeline/Timeline.js';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
     <Navigation />
+    <Header />
+    <Timeline />
   </React.StrictMode>,
   document.getElementById('root')
 );

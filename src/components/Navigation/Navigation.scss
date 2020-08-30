@@ -5,10 +5,26 @@ nav {
     align-items: center;
     padding: 0 10%;
     height: 80px;
+    div.logo-wrapper {
+        h1.logo {
+            font-family: 'Damion', cursive;
+            cursor: pointer;
+            span {
+                transition: color .3s ease-in-out;
+            }
+            &:hover {
+                span {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
     div.nav-items {
         position: relative;
         display: grid;
-        grid-template-columns: 1fr auto;
+        // grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr;
+        justify-items: right;
         column-gap: 30px;
         div.theme-picker {
             width: 100px;
