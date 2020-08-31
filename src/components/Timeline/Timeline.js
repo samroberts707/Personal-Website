@@ -47,9 +47,9 @@ class Timeline extends Component {
     }
     createItems(item, index) {
         return (
-        <div key="{item.key}" className="item" id={index}>
+        <div key="{item.key}" className="item" id={index} style={{gridRow: index+1}}>
             <h2>{ item.jobTitle }</h2>
-            <h4><a href="{ item.linkURL }" target="_blank" rel="noreferrer">{ item.linkText }</a></h4>
+            <h4><a href={ item.linkURL } target="_blank" rel="noopener noreferrer">{ item.linkText }</a></h4>
             <h4>{ item.startDate } - { item.endDate }</h4>
         </div> )
     }
