@@ -31,17 +31,20 @@ export default {
     const device = new Deviceful({
       parent: '.mockup',
       device: 'laptop',
-      screenshot: './images/redgarden.jpg',
-      screenshotHeight: 2402,
-      initialDeviceRotation: -30,
+      screenshot: './images/known-media.jpg',
+      screenshotHeight: 6790,
+      // device: 'phone',
+      // screenshot: './images/known-media-phone.jpg',
+      // screenshotHeight: 15864,
+      // initialDeviceRotation: -30,
       autoHeight: true
     })
     device.mount()
     device.scroll({
         direction: "down",      // or "up"
-        duration: 6000,         // in milliseconds
+        duration: 30000,         // in milliseconds
         delay: 1000,
-        easing: 'easeOutQuad'   // see Advanecd Animations for a list of available easings
+        easing: 'linear'   // see Advanecd Animations for a list of available easings
     })
   },
   data: function () {
