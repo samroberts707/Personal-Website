@@ -11,21 +11,39 @@
         <div class="text" v-html="project.content"></div>
       </div>
       <div class="mockup">
-        <!-- <img :src="project.mockup" :alt="project.title"/> -->
+        <!-- <img :src="project.mockup" :alt="project.title"/>
         <picture>
           <source media="(min-width: 768px)" v-bind:srcset="project.mockupWebP" type="image/webp"/>
           <source media="(min-width: 768px)" v-bind:srcset="project.mockup" type="image/png"/>
           <source media="(max-width: 768px)" v-bind:srcset="project.mockupMobileWebP" type="image/webp" />
           <source media="(max-width: 768px)" v-bind:srcset="project.mockupMobile" type="image/png" />
           <img :src="project.mockup" :alt="project.title" type="image/png" />
-        </picture>
+        </picture> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Deviceful from 'deviceful'
 export default {
+  mounted: function () {
+    const device = new Deviceful({
+      parent: '.mockup',
+      device: 'laptop',
+      screenshot: './images/redgarden.jpg',
+      screenshotHeight: 2402,
+      initialDeviceRotation: -30,
+      autoHeight: true
+    })
+    device.mount()
+    device.scroll({
+        direction: "down",      // or "up"
+        duration: 6000,         // in milliseconds
+        delay: 1000,
+        easing: 'easeOutQuad'   // see Advanecd Animations for a list of available easings
+    })
+  },
   data: function () {
     return {
       projects: [
@@ -170,9 +188,19 @@ export default {
       }
       div.mockup {
         display: block;
-        img {
+        align-self: center;
+        // img {
+        //   display: block;
+        //   width: 100%;
+        //   height: auto;
+        // }
+        div.deviceful {
           display: block;
-          width: 100%;
+          height: 400px;
+        }
+        canvas {
+          position: relative;
+          z-index: 20;
           height: auto;
         }
       }
